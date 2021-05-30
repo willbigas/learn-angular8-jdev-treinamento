@@ -4,16 +4,16 @@
   </div>
 
   <div class="mb-3">
-    <label for="user">E-mail:</label>
-    <input type="email" class="form-control" id="user" placeholder="Informe o seu usuário.." required="true">
+    <label for="login">E-mail:</label>
+    <input type="email" class="form-control" [(ngModel)]="usuario.login" id="login" name="login" placeholder="Informe o seu usuário.." required="true">
     <div id="emailHelp" class="form-text">Você não deve compartilhar este usuário com ninguém..</div>
   </div>
   <div class="mb-3">
     <label for="senha">Senha:</label>
-    <input type="password" class="form-control" id="senha" placeholder="Informe sua senha..." required="true">
+    <input type="password" class="form-control" [(ngModel)]="usuario.senha" id="senha" name="senha" placeholder="Informe sua senha..." required="true">
     <div id="passwordHelpBlock" class="form-text">
       Sua senha deve ter de 8-20 caracteres, contendo letras e números, e não pode conter espaços, caracteres especiais ou emojis.
     </div>
   </div>
-  <button type="button" class="btn btn-primary">Acessar</button>
+  <button type="button" class="btn btn-primary" (click)="login()">Acessar</button>
 </form>

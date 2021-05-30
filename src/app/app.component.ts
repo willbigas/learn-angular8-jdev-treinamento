@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'learn-angular8-jdev-treinamento';
+  title = 'Angular 8 - Acesso ao Sistema';
+
+  usuario = {login: '' , senha: ''};
+
+  public login() {
+    console.log('Teste Login' + this.usuario.login + 'senha' + this.usuario.senha);
+  }
 }
